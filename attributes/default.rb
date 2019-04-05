@@ -100,7 +100,7 @@ default['openstack']['network']['dnsmasq']['upstream_dns_servers'] = %w(8.8.8.8 
 # List of domains and corresponding IP addresses to override upstream DNS
 # servers. The format expected by by dnsmasq is /<domain>/<address>,
 # e.g. "/double-click.net/127.0.0.1" or "/localhost/::1".
-default['openstack']['network']['dnsmasq']['override_dns_address'] = %w()
+default['openstack']['network']['dnsmasq']['override_dns_address'] = %w(/localhost/127.0.0.1 /localhost/::1)
 
 # ============================= DHCP Agent Configuration ===================
 default['openstack']['network_dhcp']['config_file'] = '/etc/neutron/dhcp_agent.ini'
